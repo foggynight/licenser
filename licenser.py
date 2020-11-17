@@ -29,22 +29,20 @@ def get_text(msg):
     return file.readlines()
 
 def main():
-    # get desired license
+    # Get license and preamble
     license = get_text('License path: ')
-
-    # get desired file preamble
     preamble = get_text('Preamble path: ')
 
-    # get list of target source files
+    # Get list of target source files
     exts = input('File extensions: ').split()
     targs = []
     for ext in exts:
         targs.extend([str(e) for e in Path('.').glob(f'**/*.{ext}')])
 
-    # copy license to target dir
+    # Copy license to target dir
     open('LICENSE', 'w').writelines(license)
 
-    # copy file preamble to all source files
+    # Copy file preamble to all source files
     for file in targs:
         old = open(file).readlines()
         open(file, 'w').writelines(preamble + old)
