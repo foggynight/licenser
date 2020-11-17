@@ -1,5 +1,7 @@
 # licenser
 
+Import a license into source code.
+
 ## License
 
 Copyright (C) 2020 Robert Coffey
