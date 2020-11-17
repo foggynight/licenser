@@ -9,7 +9,8 @@
 
 def get_text(msg):
     """
-    Get the text content from a file.
+    Get the text content from a file located at the path obtained
+    through a call to input.
 
     @params
     - msg {str}: Input prompt message
