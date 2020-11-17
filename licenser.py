@@ -22,8 +22,7 @@ def get_text(msg):
     file = None
     while not file:
         try:
-            path = input(msg)
-            file = open(path)
+            file = open(input(msg))
         except:
             print('Error: Cannot open file, try again')
     return file.readlines()
