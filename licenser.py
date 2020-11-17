@@ -45,6 +45,9 @@ def main():
     open('LICENSE', 'w').writelines(license)
 
     # copy file preamble to all source files
+    for file in targs:
+        old = open(file).readlines()
+        open(file, 'w').writelines(preamble + old)
 
 if __name__ == '__main__':
     main()
