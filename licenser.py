@@ -27,7 +27,7 @@ def get_text(msg):
             print('Error: Cannot open file, try again')
     return file.readlines()
 
-def main():
+if __name__ == '__main__':
     # Get license and preamble
     license = get_text('License path: ')
     preamble = get_text('Preamble path: ')
@@ -45,6 +45,3 @@ def main():
     for file in targs:
         old = open(file).readlines()
         open(file, 'w').writelines(preamble + old)
-
-if __name__ == '__main__':
-    main()
