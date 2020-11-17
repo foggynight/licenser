@@ -7,6 +7,8 @@
 #
 # Copyright (C) 2020 Robert Coffey
 
+from pathlib import Path
+
 def get_text(msg):
     """
     Get the text content from a file located at the path obtained
@@ -34,6 +36,11 @@ def main():
     preamble = get_text('Preamble path: ')
 
     # get list of target source files
+    exts = input('File extensions: ').split()
+    targs = []
+    for ext in exts:
+        targs.extend([str(e) for e in Path('.').glob(f'**/*.{ext}')])
+
     # copy license to target dir
     # copy file preamble to all source files
 
