@@ -42,6 +42,8 @@ def main():
         targs.extend([str(e) for e in Path('.').glob(f'**/*.{ext}')])
 
     # copy license to target dir
+    open('LICENSE', 'w').writelines(license)
+
     # copy file preamble to all source files
 
 if __name__ == '__main__':
