@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: GPL-2.0
-# Copyright (C) 2020 Robert Coffey
 
 # --- licenser ---
 #
 # Import a license into source code.
+#
+# Copyright (C) 2020 Robert Coffey
+# Licensed under the GNU GPLv2
 
 from pathlib import Path
 from sys import argv
