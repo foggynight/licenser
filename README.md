@@ -2,6 +2,10 @@
 
 Import a license into source code.
 
+## Dependencies
+
+- Python3
+
 ## License
 
 Copyright (C) 2020 Robert Coffey
